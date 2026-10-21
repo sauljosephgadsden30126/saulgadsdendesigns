@@ -1,12 +1,25 @@
+/*!
+ * Start Bootstrap - Freelancer v3.3.7+1 (http://startbootstrap.com/template-overviews/freelancer)
+ * Copyright 2013-2016 Start Bootstrap
+ * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap/blob/gh-pages/LICENSE)
+ */
 
+
+
+
+
+body {
+
+
+  font-family: square_sans_serif,'Lato', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+
+}
 
 
 
 p {
   font-size: 20px;
 }
-
-
 
 p.small {
   font-size: 16px;
@@ -72,16 +85,7 @@ padding-bottom: 20px;
 
 
 
-html
-<div class="hero">
-    
-<video autoplay loop muted plays-inline>
-    <source src="img/vecteezy_the-planet-earth-and-its-moon_1622901.mp4" type="video/mp4">
 
-</video>
-
-
-</div>
 
 .hero{
 
@@ -165,7 +169,7 @@ header {
   justify-content: center;
   text-align: center;
 
-  background: url("../img/test5.gif") center / cover no-repeat;
+  background: url("../img/test3.gif") center / cover no-repeat;
 }
 
 
@@ -327,9 +331,97 @@ header .intro-text .skills {
   }
 }
 
-
+*--------------------------------------------------------------
+Global Callouts - Get Info/Visit/Apply
+--------------------------------------------------------------
+*/
 
  
+
+
+.global-callouts .block-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 2.4%;
+}
+.global-callout {
+    position: relative;
+    border:8px solid #e4eded;
+    border-radius: 8px;
+    transition:border-color .3s ease-out;
+}
+.global-callout .icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 8.5vw;
+    height: 8.5vw;
+    max-height: 120px;
+    max-width: 120px;
+    border-radius: 50%;
+    position: absolute;
+    box-shadow: 0 4px 8px rgba(33,58,57,.1);
+    color: #fff;
+    font-size: 5.6vw;
+    left: -23px;
+    top: -23px;
+    z-index: 1;
+}
+.global-callout h4 {
+    font:2.5rem/1 futura-pt-bold, sans-serif;
+    text-transform: uppercase;
+    margin-bottom: .25em;
+}
+.global-callout p {
+    font-size: 1.125rem;
+    line-height: 1.5;
+    margin:0;
+}
+.global-callout .callout-content {
+transform: perspective(1px) translateZ(0);
+    position: relative;
+    overflow: hidden;
+    padding: 6% 6% 6% 30%;
+    height: 100%;
+}
+.global-callout .callout-content:before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    top: -125%;
+    left: -25%;
+    width:150%;
+    right: 0;
+    bottom: -125%;
+    border-radius: 100%;
+    transform: scale(0);
+    transition: color .3s;
+}
+.global-callout .yellow-bg + .callout-content:before {
+    background-color: #f2a900;
+}
+.global-callout .teal-bg + .callout-content:before {
+    background-color: #00bfb3;
+}
+.global-callout .red-bg + .callout-content:before {
+    background-color: #fa4616;
+}
+.global-callout:hover .callout-content,
+.global-callout:focus .callout-content,
+.global-callout:active .callout-content,
+.global-callout:hover .callout-content h4,
+.global-callout:focus .callout-content h4,
+.global-callout:active .callout-content h4 {
+    color: #fff;
+}
+.global-callout:hover .callout-content:before,
+.global-callout:focus .callout-content:before,
+.global-callout:active .callout-content:before {
+    transition: transform .3s ease-out;
+    transform: scale(1);
+}
+
+
 
 
 section {
@@ -342,7 +434,7 @@ section {
 
 }
 
-section h2 {
+section h1 {
   margin: 0;
   font-size: 3em;
 }
@@ -469,7 +561,7 @@ section#contact{
   text-align: center;
   top: 50%;
   margin-top: -12px;
-  color: black;
+  color: white;
 }
 #portfolio .portfolio-item .portfolio-link .caption .caption-content i {
   margin-top: -12px;
@@ -786,22 +878,6 @@ fieldset[disabled] .btn-success.active {
 .btn:active,
 .btn.active {
   outline: none;
-}
-
-
-
-.testbtn {
-  background-color: #04AA6D;
-  color: white;
-  font-size: 15px;
-  padding: 12px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-}
-
-.testbtn:hover {
-  background-color: #059862;
 }
 
 
